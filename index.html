@@ -62,16 +62,19 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Meta Onion Service 1</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Broker Onion Service</h4>
+                        <p class="text-muted">We provide a way for host's to create a 'Broker Onion-Service'--a BOS--
+                            that our user meets with at a rendezvous before then meeting at yet another rendesvous to transfer the message to the host. </p>
                     </div>
                     <div class="col-md-6">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Latest News on Tor via Azure</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Summarize StackExchange Discussions via Microsoft Azure</h4>
+                        <p class="text-muted">We built functions that allow us to summarize popular tags and unanswered questions on Tor for those of us who like to
+                            stay up to date.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -108,12 +111,26 @@
                     <h2 class="section-heading text-uppercase">How Onionize It! Works</h2>
                     <h3 class="section-subheading text-muted">There are two main parts — we'll explain one here.
                     </h3>
-                    <p>We documented our onion rings project in <a href="https://github.com/Kh-ra/onion-rings">Github</a> so that anyone can contribute to it and so that we could easily
+                    
+                    <p>Here's a sketch outlining the architecture of our onion rings project — because planning is everything!</p>
+
+                    <p><img src= assets/img/architecture.png></p>
+
+                    <p>We documented the project in <a href="https://github.com/Kh-ra/onion-rings">Github</a> so that anyone can contribute to it and so that we could easily
                         collaborate with each other. <br><a href="https://github.com/Kh-ra/onion-rings">Click here to learn more about it.</a></p>
+
+                    <hr color = "black">
 
                     <p>Here's how our Microsoft Azure project works:</p>
 
-                    <p>First, we installed Azure on </p>
+                    <p>First, we installed Azure on VSCode and made sure to select our Python interpreter.</p>
+                    <img src= assets/img/AzureInVSCode.JPG>
+
+                    <br><br><br>
+
+                    <p>Then we implemented the following:</p>
+
+                    <br><br>
 
                     <div class="row text-center">
                         <div class="col-md-3">
@@ -153,7 +170,133 @@
                             <p class="text-muted">Data is collected from StackExchange</p>
                         </div>
                     </div>
-    
+
+                    <br><br><br>
+
+                    <p>In order to save the output of our triggered function, we added a binding:</p>
+
+                    <br><br>
+
+                    <div class="row text-center">
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-clock fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">Timer Trigger</h4>
+                            <p class="text-muted">Using Cron notation, everyday at 3am</p>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-bolt fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">FAAS<br>(Function As A Service)</h4>
+                            <p class="text-muted">Function gets executed</p>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">StackExchange API</h4>
+                            <p class="text-muted">Data is collected from StackExchange</p>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-cloud-upload-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">Add Binding</h4>
+                            <p class="text-muted">Store function output in blob storage (CSV)</p>
+                        </div>
+                    </div>
+
+                    <br><br><br>
+
+                    <p>Now that the file has been saved to blob storage, here's what happens next:</p>
+
+                    <br><br>
+
+                    <div class="row text-center">
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-cloud-upload-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">CSV Created</h4>
+                            <p class="text-muted">File is now stored in blob storage</p>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-bolt fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">FAAS<br>(Function As A Service)</h4>
+                            <p class="text-muted">Blob storage trigger function gets executed when new file is added to storage</p>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-digital-tachograph fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">Process Data</h4>
+                            <p class="text-muted">Create and save plots</p>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">Prettify Results</h4>
+                            <p class="text-muted">Make it so!</p>
+                        </div>
+                    </div>
+                    
+                    <br><br><br>
+
+                    <p>Afterwards, we end up with a brings-tears-to-my-eyes 3am daily digest like this:</p>
+
+                    <br><br>
+
+                    <img src= assets/img/StackExchange.JPG>
+
                 </div>
             </div>
         </section>
